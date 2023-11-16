@@ -1,0 +1,25 @@
+/*REFINE CSS v 1.0.0.*/
+
+/*Commons*/
+section {
+    background-image: url(/wp-content/uploads/2023/11/body-bg.svg);
+    background-position: center top;
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+.g-cols.via_flex.type_default {
+    margin: 0 -1.25rem;
+}
+.g-cols.via_flex.type_default>div>.vc_column-inner {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+@media (min-width: 1181px) {
+    html, .l-header .widget, .menu-item-object-us_page_block {
+        font-size: 1.35vw;
+    }
+    .l-section-h {
+        max-width: 100%;
+    }
+}
