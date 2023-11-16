@@ -14,8 +14,19 @@ section {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
-
-@media (min-width: 1181px) {
+/*DEVICES*/
+@media (min-width: 1921px) {
+    html, .l-header .widget, .menu-item-object-us_page_block {
+        font-size: 26px;
+    }
+    .l-section-h {
+        max-width: 1920px;
+    }
+    section {
+        background-size: calc(1920px + 5rem) auto;
+    }
+}
+@media (min-width: 1181px) and (max-width: 1920px) {
     html, .l-header .widget, .menu-item-object-us_page_block {
         font-size: 1.35vw;
     }
