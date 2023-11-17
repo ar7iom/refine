@@ -1,20 +1,37 @@
 /*REFINE CSS v 1.0.0.*/
 
-/*Commons*/
-section {
+/*Zoom rules*/
+#page-content > section {
     background-image: url(/wp-content/uploads/2023/11/body-bg.svg);
     background-position: center top;
     background-repeat: repeat-y;
     background-size: 100%;
 }
+section.no-decor {
+    background-image: none !important;
+}
 .g-cols.via_flex.type_default {
     margin: 0 -1.25rem;
 }
-.g-cols.via_flex.type_default>div>.vc_column-inner {
+.g-cols.via_flex.type_default>div>.vc_column-inner, .l-subheader.width_full, .l-subheader-cell {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
-/*DEVICES*/
+/*Commons*/
+/*main-slider*/
+.main-slider .l-section-img {
+    background-size: 23.75rem auto !important;
+}
+/*header*/
+.header-logo {
+    width: auto !important;
+    max-width: none !important;
+}
+.l-subheader.at_middle {
+    line-height: 5.625rem!important;
+    height: 5.625rem!important;
+}
+/*Devices*/
 @media (min-width: 1921px) {
     html, .l-header .widget, .menu-item-object-us_page_block {
         font-size: 26px;
@@ -22,7 +39,7 @@ section {
     .l-section-h {
         max-width: 1920px;
     }
-    section {
+    #page-content > section {
         background-size: calc(1920px + 5rem) auto;
     }
 }
@@ -32,5 +49,13 @@ section {
     }
     .l-section-h {
         max-width: 100%;
+    }
+}
+@media (min-width: 769px) and (max-width: 1180px){
+
+}
+@media (min-width: 601px) and (max-width: 768px){
+    .main-slide .vc_column-inner {
+        justify-content: flex-start !important;
     }
 }
