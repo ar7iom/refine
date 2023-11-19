@@ -1,5 +1,8 @@
 /*REFINE CSS v 1.0.0.*/
-
+/*root*/
+:root {
+    --color-white: #FFFFFF;
+}
 /*Zoom rules*/
 #page-content > section {
     background-image: url(/wp-content/uploads/2023/11/body-bg.svg);
@@ -18,6 +21,7 @@ section.no-decor {
     padding-right: 1.25rem;
 }
 /*Commons*/
+
 /*main-slider*/
 .main-slider .l-section-img {
     background-size: 23.75rem auto !important;
@@ -27,10 +31,48 @@ section.no-decor {
     width: auto !important;
     max-width: none !important;
 }
-.l-subheader.at_middle {
+#page-header .l-subheader.at_middle {
     line-height: 5.625rem!important;
     height: 5.625rem!important;
 }
+#page-header.sticky .l-subheader.at_middle {
+    line-height: 4.5rem!important;
+    height: 4.5rem!important;
+}
+#page-header .header_right {
+    padding-top: 3.125rem;
+}
+#page-header.sticky .header_right {
+    padding-top: 0;
+}
+.w-cart-link, .w-cart-icon {
+    line-height: 2.5rem;
+}
+.w-cart-link {
+    width:2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    border: 1px solid var(--color-content-border);
+}
+.w-cart-link:hover {
+    background-color: var(--color-content-text);
+    border:1px solid var(--color-content-text);
+    color: var(--color-white) !important;
+}
+.w-nav-icon>div:before {
+    top: -0.3125rem;
+}
+.w-nav-icon>div:after {
+    top: 0.3125rem;
+}
+.l-subheader.at_middle .type_mobile .w-nav-list.level_1 {
+    background: var(--color-header-middle-text);
+    color: var(--color-header-middle-bg);
+}
+.w-nav.type_mobile .w-nav-anchor:not(.w-btn) {
+    padding: 0.35rem 0.7rem;
+}
+
 /*Devices*/
 @media (min-width: 1921px) {
     html, .l-header .widget, .menu-item-object-us_page_block {
@@ -42,7 +84,11 @@ section.no-decor {
     #page-content > section {
         background-size: calc(1920px + 5rem) auto;
     }
+    .header_right__left {
+        margin-right: 3.75rem !important;
+    }
 }
+
 @media (min-width: 1181px) and (max-width: 1920px) {
     html, .l-header .widget, .menu-item-object-us_page_block {
         font-size: 1.35vw;
@@ -50,12 +96,50 @@ section.no-decor {
     .l-section-h {
         max-width: 100%;
     }
+    .header_right__left {
+        margin-right: 5.25vw !important;
+    }
 }
-@media (min-width: 769px) and (max-width: 1180px){
-
+@media (min-width: 1025px) and (max-width: 1180px){
+    .header_right__left {
+        margin-right: 3.75rem !important;
+    }
 }
-@media (min-width: 601px) and (max-width: 768px){
-    .main-slide .vc_column-inner {
-        justify-content: flex-start !important;
+@media (max-width: 1024px) {
+    .main-slider_img img {
+        width: auto !important;
+        height: 100% !important;
+        max-width: none !important;
+     }
+}
+@media (min-width: 901px) and (max-width: 1024px){
+    .header_right__left {
+        margin-right: 2.3rem !important;
+    }
+}
+@media (max-width: 900px) {
+    #page-header .header_right {
+        padding-top: 0;
+    }
+}
+@media (min-width: 601px) and (max-width: 900px){
+    #page-header .l-subheader.at_middle, #page-header .header_left {
+        line-height: 5.5rem!important;
+        height: 5.5rem!important;
+    }
+    #page-header.sticky .l-subheader.at_middle, #page-header.sticky .header_left {
+        line-height: 4rem!important;
+        height: 4rem!important;
+    }
+}
+@media (max-width: 667px) {
+    .header_contacts {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    #page-header .l-subheader.at_middle, #page-header.sticky .l-subheader.at_middle, #page-header .header_left, #page-header.sticky .header_left {
+        line-height: 4rem!important;
+        height: 4rem!important;
     }
 }
