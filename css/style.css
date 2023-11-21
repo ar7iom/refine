@@ -88,6 +88,11 @@ section.no-decor {
     background: transparent;
     color: var(--color-content-link-hover);
 }
+.line {
+    height: 0.084vw!important;
+    max-height: 0.1rem!important;
+    min-height: 1px!important;
+}
 /*header*/
 .header-logo {
     width: auto !important;
@@ -173,6 +178,26 @@ section.no-decor {
 .main-slider .owl-carousel.navpos_outside .owl-prev {
     right: calc(100% + 3.75rem);
 }
+/*Actions*/
+.old-price {
+    display: inline-block;
+    position: relative;
+}
+.old-price .line {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+}
+/*main-advantage*/
+.main-advantage .w-iconbox-icon {
+    width: 3rem !important;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid var(--color-content-primary);
+}
+.main-advantage:last-child {
+    margin-bottom: 0;
+}
 /*Devices*/
 @media (min-width: 1921px) {
     html, .l-header .widget, .menu-item-object-us_page_block {
@@ -202,7 +227,7 @@ section.no-decor {
 }
 @media (min-width: 1025px) and (max-width: 1180px){
     .header_right__left {
-        margin-right: 4rem !important;
+        margin-right: 4.2rem !important;
     }
 }
 @media (max-width: 1024px) {
@@ -214,7 +239,7 @@ section.no-decor {
 }
 @media (min-width: 901px) and (max-width: 1024px){
     .header_right__left {
-        margin-right: 2.3rem !important;
+        margin-right: 2.5rem !important;
     }
 }
 @media (max-width: 900px) {
@@ -227,6 +252,9 @@ section.no-decor {
     #page-content > section {
         background-size: 98%;
     }
+    .main-slider_section .l-section-img {
+        display: none;
+    }
 }
 @media (min-width: 601px) and (max-width: 900px){
     #page-header .l-subheader.at_middle, #page-header .header_left {
@@ -236,6 +264,15 @@ section.no-decor {
     #page-header.sticky .l-subheader.at_middle, #page-header.sticky .header_left {
         line-height: 4rem!important;
         height: 4rem!important;
+    }
+    .actions_bg {
+        display: flex;
+        align-items: flex-end
+    }
+    .actions_bg img {
+        max-width: none;
+        width: 100% !important;
+        height: auto !important;
     }
 }
 @media (max-width: 667px) {
