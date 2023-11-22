@@ -198,6 +198,10 @@ section.no-decor {
 .main-advantage:last-child {
     margin-bottom: 0;
 }
+/*Kitchen*/
+.kitchen_grid-colors {
+    
+}
 /*Devices*/
 @media (min-width: 1921px) {
     html, .l-header .widget, .menu-item-object-us_page_block {
