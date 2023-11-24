@@ -85,13 +85,40 @@ section.no-decor {
     margin-bottom: var(--h6-margin-bottom,1.5rem);
 }
 .no-touch .owl-carousel.navpos_outside.navstyle_circle>.owl-nav button:hover, .no-touch .owl-carousel.navpos_outside.navstyle_block>.owl-nav button:hover {
-    background: transparent;
     color: var(--color-content-link-hover);
+    background: var(--color-content-bg);
 }
 .line {
     height: 0.084vw!important;
     max-height: 0.1rem!important;
     min-height: 1px!important;
+}
+.link a {
+    display: inline-block;
+    border-bottom: 0.062rem solid var(--color-content-border);
+    color: var(--color-content-text);
+}
+.link a span {
+    transition-property: background,box-shadow,border,color,opacity,transform;
+    transition-duration: 0.3s;
+}
+.link a:hover {
+    color: var(--color-content-text);
+    border-bottom: 0.062rem solid var(--color-content-primary);
+}
+.link a:hover span {
+    opacity: 0.6;
+}
+.owl-carousel.navstyle_circle .owl-nav button {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--color-content-bg);
+}
+.owl-carousel.navpos_outside .owl-next {
+    left: calc(100% - 1.25rem);
+}
+.owl-carousel.navpos_outside .owl-prev {
+    right: calc(100% - 1.25rem);
 }
 /*header*/
 .header-logo {
@@ -163,10 +190,6 @@ section.no-decor {
 .main-slider_social a:hover {
     color: var(--color-content-link-hover);
 }
-.main-slider .owl-carousel.navstyle_circle .owl-nav button {
-    width: 2.5rem;
-    height: 2.5rem;
-}
 .main-slider .owl-carousel .owl-nav button {
     top:auto;
     bottom: 0;
@@ -198,9 +221,11 @@ section.no-decor {
 .main-advantage:last-child {
     margin-bottom: 0;
 }
-/*Kitchen*/
-.kitchen_grid-colors {
-    
+/*Banners*/
+.banner-1_img img {
+    max-width: none;
+    width: 100% !important;
+    height: 100%;
 }
 /*Devices*/
 @media (min-width: 1921px) {
@@ -231,7 +256,7 @@ section.no-decor {
 }
 @media (min-width: 1025px) and (max-width: 1180px){
     .header_right__left {
-        margin-right: 4.2rem !important;
+        margin-right: 4rem !important;
     }
 }
 @media (max-width: 1024px) {
@@ -244,6 +269,9 @@ section.no-decor {
 @media (min-width: 901px) and (max-width: 1024px){
     .header_right__left {
         margin-right: 2.5rem !important;
+    }
+    #page-content > section {
+        background-size: 99.4%;
     }
 }
 @media (max-width: 900px) {
@@ -283,8 +311,11 @@ section.no-decor {
     .header_contacts {
         display: none;
     }
+    .g-cols.via_flex.type_default {
+        margin: 0 -1.5rem;
+    }
     #page-content > section {
-        background-size: 290vw;
+        background-size: 298vw;
     }
 }
 @media (max-width: 600px) {
