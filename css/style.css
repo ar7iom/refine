@@ -227,6 +227,11 @@ section.no-decor {
     width: 100% !important;
     height: 100%;
 }
+/*Icon block*/
+.yellow-icon {
+    width: 3.75rem;
+    height: 3.75rem;
+}
 /*Devices*/
 @media (min-width: 1921px) {
     html, .l-header .widget, .menu-item-object-us_page_block {
@@ -242,7 +247,6 @@ section.no-decor {
         margin-right: 4rem !important;
     }
 }
-
 @media (min-width: 1181px) and (max-width: 1920px) {
     html, .l-header .widget, .menu-item-object-us_page_block {
         font-size: 1.36vw;
