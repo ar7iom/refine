@@ -2,6 +2,7 @@
 /*root*/
 :root {
     --color-white: #FFFFFF;
+    --color-grey: #b3b2ad;
 }
 /*Zoom rules*/
 #page-content > section, #page-header.id_525 .width_full {
@@ -220,6 +221,50 @@ section.no-decor {
     background-color: var(--color-content-text);
     color: var(--color-content-bg) !important;
 }
+/*breadcrumbs*/
+.breadcrumbs {
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--color-grey);
+    margin: 0 -0.3125rem;
+}
+.breadcrumbs span span {
+    margin: 0 0.3125rem;
+}
+
+.breadcrumbs span span a {
+    color: var(--color-grey);
+}
+.breadcrumbs span span a:hover {
+    color: var(--color-content-link-hover);
+}
+.breadcrumbs span span.breadcrumb_last strong {
+    font-weight: 400 !important;
+    color: var(--color-content-text);
+}
+.breadcrumbs span a:hover {
+    color: var(--color-content-link-hover);
+
+}
+/*color-links*/
+.color-link {
+    display:block;
+    width:1.5rem;
+    height:1.5rem;
+    border-radius:0.75rem
+}
+.colors {
+    display: flex;
+    padding: 0.3125rem 0rem;
+    align-items: flex-start;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+.colors a:hover {
+    transform: scale(1.15);
+}
 /*main-slider*/
 .main-slider_section .l-section-img {
     background-size: 23.75rem auto !important;
@@ -282,6 +327,15 @@ section.no-decor {
     height: 100%;
     width: 100%;
 }
+/*Product gallery*/
+.product-gallery_img {
+    max-height: 30rem;
+}
+/*Smeta*/
+.smeta-item_img img {
+    height: 100% !important;
+    width: auto !important;
+}
 /*Footer*/
 .footer_contact i.far {
     display: inline-block;
@@ -336,6 +390,9 @@ section.no-decor {
     .header_right__left {
         margin-right: 4rem !important;
     }
+    .product-gallery_img {
+        max-height: 25rem;
+    }
 }
 @media (min-width: 1181px) and (max-width: 1920px) {
     html, .l-header .widget, .menu-item-object-us_page_block {
@@ -346,6 +403,9 @@ section.no-decor {
     }
     .header_right__left {
         margin-right: 5.5vw !important;
+    }
+    .product-gallery_img {
+        max-height: 25rem;
     }
 }
 @media (min-width: 1025px) and (max-width: 1180px){
