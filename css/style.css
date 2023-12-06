@@ -3,10 +3,10 @@
 :root {
     --color-white: #FFFFFF;
     --color-grey: #b3b2ad;
-    --fields-gap:2.5rem;
+    --fields-gap:1.25rem;
 }
 /*Zoom rules*/
-#page-content > section, #page-header.id_525 .width_full {
+#page-content > section, #page-header.id_525 .width_full, .woocommerce-checkout > section {
     background-image: url(/wp-content/uploads/2023/11/body-bg.svg);
     background-position: center top;
     background-repeat: repeat-y;
@@ -30,7 +30,7 @@ section.no-decor {
     padding-right: 1.25rem;
 }
 /*Commons*/
-.w-search-close:before, .w-nav-close:before, .w-filter-list-closer:before, .w-popup-closer:before, .l-popup-closer:before, .l-popup-arrow.to_next:before, .l-popup-arrow.to_prev:before, .w-toplink span:not(.ripple-container):after, .owl-next:after, .owl-prev:after, .w-filter.state_desktop.layout_hor .w-filter-item-reset::before, .mfp-container::after, .mfp-arrow:before, .post_navigation .order_second .post_navigation-item-arrow:before, .post_navigation .order_first .post_navigation-item-arrow:before, .w-nav-arrow:before {
+.w-search-close:before, .w-nav-close:before, .w-filter-list-closer:before, .w-popup-closer:before, .l-popup-closer:before, .l-popup-arrow.to_next:before, .l-popup-arrow.to_prev:before, .w-toplink span:not(.ripple-container):after, .owl-next:after, .owl-prev:after, .w-filter.state_desktop.layout_hor .w-filter-item-reset::before, .mfp-container::after, .mfp-arrow:before, .post_navigation .order_second .post_navigation-item-arrow:before, .post_navigation .order_first .post_navigation-item-arrow:before, .w-nav-arrow:before, .w-cart-table a.remove:before {
     font-weight: 100 !important;
 }
 .h1 {
@@ -141,7 +141,7 @@ section.no-decor {
 .owl-carousel.navpos_outside .owl-prev {
     right: calc(100% - 1.25rem);
 }
-.w-filter-item[data-ui_type="dropdown"] .w-filter-item-values:after, .w-filter.state_desktop.style_drop_default .w-filter-item:not(.has_value) .w-filter-item-title:after, .w-form-row.for_select .w-form-row-field:after {
+.w-filter-item[data-ui_type="dropdown"] .w-filter-item-values:after, .w-filter.state_desktop.style_drop_default .w-filter-item:not(.has_value) .w-filter-item-title:after, .w-form-row.for_select .w-form-row-field:after, .woocommerce-ordering:after, .woocommerce-select:after, .select2-selection__arrow:after {
     content: '\f078';
     font-family: "fontawesome";
     font-weight: 100;
@@ -162,7 +162,7 @@ section.no-decor {
     gap: 1rem;
     justify-content: flex-end;
 }
-.w-post-elm.attributes.display_table>div>*:first-child {
+.w-post-elm.attributes.display_table>div>*:first-child, .woocommerce-form-row label, .woocommerce .form-row label, .woocommerce .shop_table.cart .product-subtotal, .woocommerce-checkout-review-order-table tfoot td, .woocommerce-checkout #ship-to-different-address {
     font-weight: 500;
 }
 .w-post-elm.attributes.display_table>div>*:first-child {
@@ -187,6 +187,13 @@ section.no-decor {
     margin-top: 0.9rem;
     background: var(--color-white);
 }
+.product-name a, .wc_payment_methods li>input:checked+label {
+    color: var(--color-content-text);
+}
+.wc_payment_methods, .wc-saved-payment-methods {
+    margin-left: 0 !important;
+}
+
 /*form*/
 .w-form-row-label {
     font-weight: 400;
@@ -208,7 +215,12 @@ input[type=checkbox], input[type=radio] {
 }
 input[type=checkbox]:before {
     font-weight: 100;
+}
+.color_alternate input[type=checkbox]:before {
     color: var(--color-alt-content-primary);
+}
+.w-form-row-description {
+    font-size: 0.625em !important;
 }
 
 /*header*/
@@ -452,14 +464,26 @@ input[type=checkbox]:before {
 .pre-footer_form .w-form-row.for_submit {
     width: 26.62%;
 }
-/*Footer*/
-.footer_contact i.far {
+.w-form.pre-footer_form .w-form-row {
+    margin-bottom: 2.5rem;
+}
+/*Contact*/
+.contact i.far {
     display: inline-block;
     width: 1.25rem;
     text-align: center;
     margin-right: 0.625rem;
+}
+.contact a {
+    color: var(--color-content-text);
+}
+/*Footer*/
+.color_footer-bottom .contact i.far {
     color:var(--color-footer-link-hover);
 }
+.color_footer-bottom .contact a {
+    color: var(--color-footer-link);
+} 
 .footer_menu ul {
     display: flex !important;
     flex-direction: row;
