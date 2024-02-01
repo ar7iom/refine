@@ -33,6 +33,10 @@ section.no-decor {
 .w-search-close:before, .w-nav-close:before, .w-filter-list-closer:before, .w-popup-closer:before, .l-popup-closer:before, .l-popup-arrow.to_next:before, .l-popup-arrow.to_prev:before, .w-toplink span:not(.ripple-container):after, .owl-next:after, .owl-prev:after, .w-filter.state_desktop.layout_hor .w-filter-item-reset::before, .mfp-container::after, .mfp-arrow:before, .post_navigation .order_second .post_navigation-item-arrow:before, .post_navigation .order_first .post_navigation-item-arrow:before, .w-nav-arrow:before, .w-cart-table a.remove:before {
     font-weight: 100 !important;
 }
+.g-loadmore {
+    text-align: left !important;
+    margin-top: 1.5rem !important;
+}
 .h1 {
     font-family: var(--h1-font-family,inherit);
     font-weight: var(--h1-font-weight,inherit);
